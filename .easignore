@@ -1,0 +1,9 @@
+backend/
+node_modules/
+mobile-app/node_modules/
+mobile-app/android/
+mobile-app/.expo/
+mobile-app/.gradle/
+.gradle/
+*.zip
+*.tar.gz
