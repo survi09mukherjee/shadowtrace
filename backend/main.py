@@ -3,6 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from test_routes import router as test_router
 from test_routes import process_telemetry
+from database import init_db, log_activity, get_user_logs
+
+# Initialize SQLite database
+init_db()
 
 app = FastAPI(title="ShadowTrace API")
 
@@ -37,3 +41,26 @@ def analyze(data: TelemetryData):
         "night_mode": data.night_mode
     }
     return process_telemetry(telemetry_dict)
+
+class LogEntry(BaseModel):
+    user_id: str
+    risk_score: float
+    status: str
+    anomaly_score: float
+    details: str = ""
+
+@app.post("/log_activity")
+def save_log(entry: LogEntry):
+    log_activity(
+        user_id=entry.user_id,
+        risk_score=entry.risk_score,
+        status=entry.status,
+        anomaly_score=entry.anomaly_score,
+        details=entry.details
+    )
+    return {"status": "success", "message": "Log saved"}
+
+@app.get("/logs/{user_id}")
+def fetch_logs(user_id: str):
+    logs = get_user_logs(user_id)
+    return {"logs": logs}
