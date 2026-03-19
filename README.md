@@ -16,26 +16,65 @@ Unlike traditional antivirus tools, ShadowTrace identifies threats by analyzing 
 
 ## 🎥 Demo
 
-👉 *(Add your demo video link here – Google Drive / YouTube)*
+<p align="center">
 
+https://github.com/user-attachments/assets/883a41a2-4d71-40df-b81d-49f15f85be7d
+
+</p>
 ---
 
 ## 📱 Screenshots
 
 ### 🛰️ Radar Monitoring
 
-### 📊 Threat Dashboard
-
-### 🚨 System Lockdown
-
-### 📜 Threat Logs
-
-### 🛠️ Operational Tools
-
-### ⚙️ Settings
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/866f5a95-a8d9-417b-bf58-0a177097e5a5" width="300"/>
+  <img src="https://github.com/user-attachments/assets/db670402-648f-4bc0-854b-79fbe5649a53" width="300"/>
+</p>
 
 ---
 
+### 📊 Threat Dashboard
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4907cebb-42ad-462c-8886-84e295c4856b" width="300"/>
+  <img src="https://github.com/user-attachments/assets/e7c7a79d-52cf-4f31-a1ca-d7a7c2fe3ada" width="300"/>
+</p>
+
+---
+
+### 🚨 System Lockdown
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e93db8c5-baaf-4bc0-b4d9-568f1e1b2579" width="350"/>
+</p>
+
+---
+
+### 📜 Threat Logs
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/73528f34-5f65-4692-a67d-386daec0528b" width="350"/>
+</p>
+
+---
+
+### 🛠️ Operational Tools
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cb42f0b3-db60-42f7-acc0-86decbb46869" width="350"/>
+</p>
+
+---
+
+### ⚙️ Settings
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c94ee6f0-ec9e-4a9e-9e07-c664f0d425ee" width="350"/>
+</p>
+
+
+---
 ## 🚨 Problem Statement
 
 * Smartphones are vulnerable to **silent surveillance**
