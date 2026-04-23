@@ -84,6 +84,15 @@ def save_log(entry: LogEntry):
     )
     return {"status": "success", "message": "Log saved"}
 
+@app.get("/")
+def read_root():
+    return {
+        "status": "online",
+        "system": "ShadowTrace Tactical API",
+        "version": "1.2.0",
+        "mission_control": "ACTIVE"
+    }
+
 @app.get("/logs/{user_id}")
 def fetch_logs(user_id: str):
     logs = get_user_logs(user_id)

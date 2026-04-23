@@ -1,5 +1,5 @@
-// 🚀 PRODUCTION URL (Change this once Render gives you a link)
-const PROD_URL = "https://shadowtrace-backend.onrender.com"; 
+// 🚀 PRODUCTION URL (LINKED TO RENDER)
+const PROD_URL = "https://shadowtrace-h7f4.onrender.com"; 
 
 // 📡 AUTOMATED FOR ANDROID: Using local IP 192.168.31.138
 const LOCAL_URL = "http://192.168.31.138:8000"; 
