@@ -7,7 +7,7 @@ DB_FILE = 'shadowtrace.db'
 def init_db():
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
-    # Create logs table
+    # Create activity logs table
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS activity_logs (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,6 +17,14 @@ def init_db():
             status TEXT NOT NULL,
             anomaly_score REAL NOT NULL,
             details TEXT
+        )
+    ''')
+    # Create emergency contacts table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS emergency_contacts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            phone TEXT NOT NULL
         )
     ''')
     conn.commit()
@@ -47,4 +55,20 @@ def get_user_logs(user_id: str, limit: int = 50):
     rows = cursor.fetchall()
     conn.close()
     
+    return [dict(row) for row in rows]
+
+def add_contact(name: str, phone: str):
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO emergency_contacts (name, phone) VALUES (?, ?)', (name, phone))
+    conn.commit()
+    conn.close()
+
+def get_contacts():
+    conn = sqlite3.connect(DB_FILE)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute('SELECT name, phone FROM emergency_contacts')
+    rows = cursor.fetchall()
+    conn.close()
     return [dict(row) for row in rows]

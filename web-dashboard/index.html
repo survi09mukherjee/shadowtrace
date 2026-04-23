@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowTrace | Central Command</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Emergency Popup -->
+    <div id="emergency-modal" class="emergency-overlay">
+        <div class="alert-box">
+            <div class="alert-title">RED ALERT</div>
+            <p style="font-size: 18px; margin-bottom: 20px;">CRITICAL SYSTEM BREACH DETECTED</p>
+            <button onclick="document.getElementById('emergency-modal').style.display='none'" class="btn" style="padding: 10px 40px; background: #fff; color: #000; border: none; font-weight: bold; cursor: pointer;">ACKNOWLEDGE</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">ShadowTrace</div>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                ACTIVE MONITORING
+            </div>
+        </header>
+
+        <main class="grid">
+            <!-- Radar Sector -->
+            <section class="card">
+                <h2>Live Radar Tracking</h2>
+                <div class="radar-wrapper">
+                    <div class="radar">
+                        <div class="radar-grid"></div>
+                        <div class="radar-sweep"></div>
+                        <div id="blip-container"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div class="stat-row">
+                        <span class="stat-label">Active Threats</span>
+                        <span class="stat-value" id="threat-count">00 Detected</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Defense Shield</span>
+                        <span class="stat-value" id="defense-status" style="color: var(--text-muted);">INACTIVE</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="button-row" style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button id="btn-normal" class="btn" style="flex: 1; padding: 12px; background: #0055ff; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-family: inherit; font-weight: bold;">Normal Mode</button>
+                    <button id="btn-simulate" class="btn" style="flex: 1; padding: 12px; background: #cc0000; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-family: inherit; font-weight: bold;">Simulate Attack</button>
+                </div>
+            </section>
+
+            <!-- System Analytics -->
+            <section class="card">
+                <h2>System Analytics</h2>
+                <div class="stat-row">
+                    <span class="stat-label">Risk Index</span>
+                    <span class="stat-value" id="risk-score">68.93%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Memory Usage</span>
+                    <span class="stat-value">4.2 GB / 16 GB</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">CPU Load</span>
+                    <span class="stat-value">12%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Native Defense</span>
+                    <span class="stat-value" style="color: var(--warning-color);">STANDBY</span>
+                </div>
+                
+                <h2 style="margin-top: 30px;">Threat Logs</h2>
+                <div class="log-list" id="log-list">
+                    <!-- Logs will be injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
