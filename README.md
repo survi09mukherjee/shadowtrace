@@ -161,15 +161,6 @@ ShadowTrace introduces a **multi-layered AI security system**:
 
 ---
 
-## 👥 Team – Digital Dianas
-
-* 👩‍💻 Survi Mukherjee
-* 👩‍💻 Titiksha Dalal  
-* 👩‍💻 Rajeshwari Das
-*  👩‍💻 Upasana Ghosh
-
----
-
 ## 🏆 Achievement
 
 🏁 Finalists – DoubleSlash 4.0 Hackathon (Jadavpur University)
